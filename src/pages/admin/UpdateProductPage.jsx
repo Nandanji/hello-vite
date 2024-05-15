@@ -5,6 +5,7 @@ import { Timestamp, doc, getDoc, setDoc } from "firebase/firestore";
 import { fireDB } from "../../firebase/FirebaseConfig";
 import toast from "react-hot-toast";
 import Loader from "../../components/loader/Loader";
+import Layout from "../../components/layout/Layout";
 
 const categoryList = [
     {
@@ -105,7 +106,8 @@ const UpdateProductPage = () => {
         getSingleProductFunction();
     }, []);
     return (
-        <div>
+        <Layout>
+            <div>
             <div className='flex justify-center items-center h-screen'>
                 {loading && <Loader />}
                 {/* Login Form  */}
@@ -217,6 +219,8 @@ const UpdateProductPage = () => {
                 </div>
             </div>
         </div>
+        </Layout>
+        
     );
 }
 

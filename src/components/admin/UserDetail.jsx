@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import myContext from "../../context/myContext";
+import Layout from "../layout/Layout";
 
 const UserDetail = () => {
     const context = useContext(myContext);
     const { getAllUser } = context;
     return (
-        <div>
+        <Layout>
+             <div>
             <div>
                 <div className="py-5 flex justify-between items-center">
                     {/* text  */}
@@ -87,6 +89,8 @@ const UserDetail = () => {
                 </div>
             </div>
         </div>
+        </Layout>
+       
     );
 }
 
